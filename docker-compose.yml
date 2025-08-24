@@ -1,0 +1,10 @@
+services:
+  multicam:
+    build: .
+    container_name: rtsp2yt
+    restart: always
+    env_file:
+      - .env
+    network_mode: host
+    environment:
+      - PYTHONUNBUFFERED=1
